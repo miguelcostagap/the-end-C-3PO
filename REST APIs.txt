@@ -1,0 +1,13 @@
+##### NASA API ####
+
+General Link
+https://api.nasa.gov/
+
+
+Daily space image, uses an api key: key=qwvMsq0lHIDwlSDp03qEayfDCGwTa6D09Mz6z9zk
+
+https://api.nasa.gov/planetary/apod?api_key=qwvMsq0lHIDwlSDp03qEayfDCGwTa6D09Mz6z9zk
+
+
+#### ---- --- ####
+
