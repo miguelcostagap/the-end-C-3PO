@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Travel Console</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/feature-cards.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/notification.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Star Wars Travel</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="features">
+            <div class="feature-card">
+                <img src="Assets/img/iconmonstr-map-1-240.png" alt="Feature 1 Icon">
+                <h2>Map</h2>
+                <p>Description for feature 1.</p>
+            </div>
+            <div class="feature-card">
+                <img src="Assets/img/iconmonstr-speech-bubble-26-240.png" alt="Feature 2 Icon">
+                <h2>Translator</h2>
+                <p>Description for feature 2.</p>
+            </div>
+        </section>
+
+        <section class="dynamic-content">
+            <div class="content-container">
+                <h2>Welcome to Star Wars Travel Console</h2>
+                <p>Select a feature from above to explore the galaxy far, far away!</p>
+                <div class="spinner" id="loadingSpinner"></div>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2023 Star Wars Travel Console</p>
+    </footer>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Modal Title</h2>
+            <p>This is the content of the modal. You can place any information here, including forms, messages, etc.</p>
+        </div>
+    </div>
+
+    <!-- Notification Placeholder (for demonstration) -->
+    <div class="notification success">
+        This is a success notification!
+    </div>
+
+
+
+    <!-- JS scripts -->
+
+    <script src="js/spinner.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/notification.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
