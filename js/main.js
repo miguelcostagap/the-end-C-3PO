@@ -1,2 +1,8 @@
-/* Use this js for orchestration and create individual files for each functionality */
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('translatorCard').addEventListener('click', () => {
+        Translator.init();
+    });
+    
+});
+
 
