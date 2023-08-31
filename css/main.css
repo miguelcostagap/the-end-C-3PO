@@ -19,15 +19,6 @@ body, h1, h2, h3, h4, p, ul {
     line-height: 1.4;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-main {
-    flex: 1; /* this will make the main content grow and take up all available space */
-}
-
 body {
     font-family: 'VT323', monospace;
     line-height: 1.6;
@@ -35,18 +26,15 @@ body {
     background-image: radial-gradient(var(--decorative-gray) 1px, transparent 1px);
     background-size: 36px 36px;
     color: var(--primary-white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 
 .container {
-    max-width: 1000px;
-    margin: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
     padding: 20px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 header {
@@ -80,14 +68,14 @@ header h1 {
 .dynamic-content {
     border: 1px solid var(--accent-yellow);
     box-shadow: 0 0 10px 2px rgba(232, 236, 102, 0.3);
-    min-height: 500px; 
+    width: 80%;
+    min-height: 6%; 
     background-color: var(--primary-gray);
     padding: 20px;
     border-radius: 12px;
     animation: glow 6s infinite;
     display: flex;
     align-items: center;
-    min-width: 100%;
 }
 
 @keyframes glow {
@@ -112,7 +100,10 @@ header h1 {
 
 
 footer {
-    margin-top: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     padding: 10px 0;
     background: var(--primary-black);
