@@ -1,66 +1,133 @@
+:root {
+    --primary-black: #0a0a0a;
+    --accent-green: #39C3AB;
+    --accent-yellow: #E8EC66;
+    --accent-red: #F54400;
+    --primary-white: #FFFBE8;
+    --primary-gray: #0f0f0f;
+    --decorative-gray: #1e1e1e;
+}
+
 /* Reset some default styles */
 body, h1, ul, p {
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+body, h1, h2, h3, h4, p, ul {
+    font-size: 1.15rem;
+    line-height: 1.4;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    flex: 1; /* this will make the main content grow and take up all available space */
+}
+
+body {
+    font-family: 'VT323', monospace;
+    line-height: 1.6;
+    background-color: var(--primary-black, #010101);
+    background-image: radial-gradient(var(--decorative-gray) 1px, transparent 1px);
+    background-size: 36px 36px;
+    color: var(--primary-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1000px;
+    margin: 40px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
 }
 
 header {
-    background: var(--primary-color, #333);
-    color: var(--text-light, #fff);
+    background-color: var(--primary-black);
+    color: var(--primary-white);
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.logo-svg {
+    width: AUTO;
+    height: 30PX;
+    margin: 16px;
+}
+
+#swLogo path {
+    height: 50px;
+    fill: var(--primary-white);
+}
+
+
+
 header h1 {
     margin: 0;
 }
 
-nav ul {
-    list-style-type: none;
+/* Dynamic content box */
+
+.dynamic-content {
+    border: 1px solid var(--accent-yellow);
+    box-shadow: 0 0 10px 2px rgba(232, 236, 102, 0.3);
+    min-height: 500px; 
+    background-color: var(--primary-gray);
+    padding: 20px;
+    border-radius: 12px;
+    animation: glow 6s infinite;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    min-width: 100%;
 }
 
-nav a {
-    color: var(--text-light, #fff);
-    text-decoration: none;
-    transition: color 0.3s;
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 5px var(--accent-yellow);
+    }
+    50% {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 7px var(--accent-yellow), 0 0 12px var(--accent-yellow);
+    }
 }
 
-nav a:hover {
-    color: var(--secondary-color, #007BFF);
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
+
+.content-container h2 {
+    margin-bottom: 20px;
+}
+
 
 footer {
     margin-top: 50px;
     text-align: center;
     padding: 10px 0;
-    background: var(--primary-color, #333);
-    color: var(--text-light, #fff);
+    background: var(--primary-black);
+    color: var(--primary-white);
 }
 
 .spinner {
-    border: 8px solid rgba(255, 255, 255, 0.3); /* Light grey */
-    border-radius: 50%; /* Circular */
-    border-top: 8px solid var(--primary-color, #333); /* Dark grey */
+    border: 8px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 50%; 
+    border-top: 8px solid var(--primary-color, #333); 
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
-    display: none; /* Initially hidden */
-    margin: 0 auto; /* Center horizontally */
+    display: none; 
+    margin: 0 auto;
 }
 
 @keyframes spin {
@@ -73,6 +140,6 @@ footer {
 @media screen and (min-width: 768px) {
     header, nav ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
     }
 }
