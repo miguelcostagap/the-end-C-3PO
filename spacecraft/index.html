@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>STAR WARS</title>
+        <link rel="stylesheet" href="./css/spacecraft-feature.css">
+        <link rel="shortcut icon" href="./assets/favicon/Darth_vadder.png" type="image/x-icon"/>
+        <script src="./js/main.js"></script>
+    </head>
+    <body>
+        <h1>Star Wars Starships</h1>
+        <div>
+            <label for="filterAttribute">Filter Attribute:</label>
+            <select id="filterAttribute">
+                <option value="name">Starship Name</option>
+                <option value="cost_in_credits">Cost</option>
+                <option value="model">Model</option>
+                <option value="starship_class">Starship Class</option>
+                <option value="length">Length</option>
+                <option value="passengers">Number Passengers</option>
+                <option value="crew">Number Crew</option>
+                <option value="manufacturer">Manufacturer</option>
+                <option value="consumables">Consumables</option>
+                <option value="cargo_capacity">Cargo Capacity</option>
+                <option value="hyperdrive_rating">Hyperdrive Rating</option>
+                <option value="max_atmosphering_speed">Atmosphering Speed</option>
+            </select>
+            <label for="filterType">Filter Type:</label>
+            <select id="filterType">
+                <option value="equal">=</option>
+                <option value="greaterThan" disabled>>=</option>
+                <option value="lessThan" disabled><=</option>
+                <option value="between" disabled>Between</option>
+            </select>
+            <input type="text" id="filterValue" placeholder="Enter filter input">
+            <input type="number" id="filterValueMin" placeholder="Min Value (Numeric)" style="display: none;">
+            <input type="number" id="filterValueMax" placeholder="Max Value (Numeric)" style="display: none;">
+            <button id="filterButton">Filter</button>
+            <button id="clearFiltersButton">Clear Filters</button>
+        <div>
+            <p>Select Starship:</p>
+        </div>
+        <div class="results"></div>
+    </body>
+</html>
