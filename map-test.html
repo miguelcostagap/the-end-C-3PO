@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/test-map.css">
+    <link rel="stylesheet" href="/css/map-function.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/feature-cards.css">
@@ -28,7 +28,7 @@
         </div>
     </header>
 
-    <div id="general-content">
+    <div id="map-function-content">
 
         <div class="quick-planner">
             <div class="quick-planner-options">
@@ -54,7 +54,7 @@
             </div>
         </div>
 
-        <div class="galaxy-map">
+        <div id="galaxy-map">
             <div class="map-container">
                 <img src="Assets/testing_temporary/01map.jpg" id="map">
             </div>
@@ -62,13 +62,14 @@
         </div>
 
     </div>
-
     <footer class="footer">
         <p>&copy; 2023 Star Wars Travel Console</p>
     </footer>
 
 
-    <script src="/js/test-map.js"></script>
+    <script type="module"  src="/js/map-function-js/map-function.js"></script>
+    <script type="module"  src="/js/map-function-js/api-fetch/planet-list-fetch.js"></script>
+
 </body>
 
 </html>
