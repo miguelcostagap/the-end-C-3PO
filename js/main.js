@@ -6,4 +6,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('chatCard').addEventListener('click', () => {
         fetchCharacters();
     });
+
+    urlFragment();
 });
