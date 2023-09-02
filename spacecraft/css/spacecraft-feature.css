@@ -1,21 +1,21 @@
-<style>
-  .star-rating {
-    display: flex;
-    gap: 5px;
-    margin-top: 10px;
-  }
-
-  .star-rating input[type="radio"] {
-    display: none;
-  }
-
-  .star-rating label {
-    cursor: pointer;
-    font-size: 24px;
-    color: #ffcc00; /* Star color */
-  }
-
-  .star-rating input[type="radio"]:checked + label {
-    color: #ffdb58; /* Selected star color */
+.star-rating {
+  display: flex;
+  align-items: center;
 }
-</style>
+
+.star-button {
+  background: none;
+  border: none;
+  font-size: 24px; /* Adjust the size as needed */
+  margin: 0 4px; /* Adjust the spacing between stars as needed */
+  cursor: pointer;
+  color: #FFD700; /* Star color (yellow in this example) */
+}
+
+.star-button:hover {
+  color: #FFAC33; /* Star color on hover (slightly darker yellow) */
+}
+
+.white-star {
+  color: white; /* Set the color to white */
+}
