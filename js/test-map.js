@@ -1,5 +1,5 @@
 const map = document.getElementById("map");
-const generalContent = document.getElementById("general-content");
+const generalContent = document.getElementById("map-function-content");
 const initialImg = document.querySelector(".galaxy-map img");
 
 const contentToDisplay = [
