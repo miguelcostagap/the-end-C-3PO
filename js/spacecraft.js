@@ -54,7 +54,7 @@ function loadSpaceshipFeature() {
             <input type="number" id="filterValueMax" placeholder="Max Value (Numeric)" style="display: none;">
         </div>
         <div class="filter-actions">
-            <button id="filterButton">Filter</button>
+            <button id="filterButton" class="filter cta">Filter</button>
             <button id="clearFiltersButton">Clear</button>
         </div>
     </div>
