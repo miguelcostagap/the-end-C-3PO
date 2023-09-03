@@ -29,7 +29,7 @@ function displayCharacters(characters) {
     characterList.classList.add('fade-out');
 
     setTimeout(() => {
-        characterList.innerHTML = '';
+        characterList.innerHTML = '<h2>Chat</h2>';
 
         characters.forEach(character => {
             const characterDiv = document.createElement('div');
@@ -58,9 +58,10 @@ function displayCharacterProfile(character) {
 
     setTimeout(() => {
         dynamicContent.innerHTML = `
+            <h2>Chat</h2>
             <button id="backToList">Back to List</button>
             <div class="character-profile">
-                <h2>${character.name}</h2>
+                <h3>${character.name}</h3>
                 <p><strong>Birth Year:</strong> ${character.birth_year}</p>
                 <p><strong>Eye Color:</strong> ${character.eye_color}</p>
                 <p><strong>Gender:</strong> ${character.gender}</p>
@@ -69,7 +70,7 @@ function displayCharacterProfile(character) {
                 <p><strong>Mass:</strong> ${character.mass} kg</p>
                 <p><strong>Skin Color:</strong> ${character.skin_color}</p>
                 <!-- Add more details as needed -->
-                <button id="startConversation">Start a Conversation</button>
+                <button id="startConversation" class="cta">Start a Conversation</button>
             </div>
         `;
 
@@ -106,10 +107,10 @@ function initiateVirtualConversation(character) {
     const dynamicContent = document.querySelector('.content-container');
     dynamicContent.innerHTML = `
         <div class="chat-interface">
-            <h3>Chatting with ${character.name}</h3>
+            <h2>Chatting with ${character.name}</h2>
             <div class="chat-messages" id="chatMessages"></div>
             <input type="text" id="userMessage" placeholder="Type your message...">
-            <button id="sendMessage">Send</button>
+            <button id="sendMessage" class="cta">Send</button>
         </div>
     `;
 

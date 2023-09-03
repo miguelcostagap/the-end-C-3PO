@@ -43,25 +43,11 @@ select, input {
 }
 
 select:hover {
-    background-color: var(--decorative-gray);
+    border: 1px solid var(--accent-yellow);
+    box-shadow: 0 0 10px 2px rgba(232, 236, 102, 0.3);
     cursor: pointer;
 }
 
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--accent-yellow);
-    color: var(--primary-black);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #dcca62;
-}
 
 #outputBox {
     width: 100%;
@@ -69,5 +55,8 @@ button:hover {
     border: 1px solid var(--decorative-gray);
     border-radius: 4px;
     background-color: var(--decorative-gray);
-    min-height: 100px;
+}
+
+#outputBox, #inputText {
+    min-height: 300px;
 }
