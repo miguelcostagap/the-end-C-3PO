@@ -1,8 +1,57 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const starshipCard = document.getElementById("starshipCard");
 
-alert(' You are connected!\n May the force be with you!');
+  starshipCard.addEventListener("click", function() {
+      loadSpaceshipFeature();
+  });
+});
 
 let results; // Store the results in the global scope
 let starshipRatings = {}; // Object to store star ratings for each starship
+
+
+function loadSpaceshipFeature() {
+  const contentContainer = document.querySelector(".content-container");
+
+  // Replace the content of the content-container with the spaceship renting feature's HTML
+  contentContainer.innerHTML = `
+    <h2>Star Wars Starships</h2>
+    <div>
+        <label for="filterAttribute">Filter Attribute:</label>
+        <select id="filterAttribute">
+            <option value="name">Starship Name</option>
+            <option value="cost_in_credits">Cost</option>
+            <option value="model">Model</option>
+            <option value="starship_class">Starship Class</option>
+            <option value="length">Length</option>
+            <option value="passengers">Number Passengers</option>
+            <option value="crew">Number Crew</option>
+            <option value="manufacturer">Manufacturer</option>
+            <option value="consumables">Consumables</option>
+            <option value="cargo_capacity">Cargo Capacity</option>
+            <option value="hyperdrive_rating">Hyperdrive Rating</option>
+            <option value="max_atmosphering_speed">Atmosphering Speed</option>
+        </select>
+        <label for="filterType">Filter Type:</label>
+        <select id="filterType">
+            <option value="equal">=</option>
+            <option value="greaterThan" disabled>>=</option>
+            <option value="lessThan" disabled><=</option>
+            <option value="between" disabled>Between</option>
+        </select>
+        <input type="text" id="filterValue" placeholder="Enter filter input">
+        <input type="number" id="filterValueMin" placeholder="Min Value (Numeric)" style="display: none;">
+        <input type="number" id="filterValueMax" placeholder="Max Value (Numeric)" style="display: none;">
+        <button id="filterButton">Filter</button>
+        <button id="clearFiltersButton">Clear Filters</button>
+    <div>
+        <p>Select Starship:</p>
+    </div>
+    <div class="results"></div>
+  `;
+
+
+
 
 
 fetch('https://swapi.dev/api/starships/')
@@ -62,7 +111,7 @@ function renderResult(results) {
     li.textContent = `${starship.name}`;
 
     let img = document.createElement("img");
-    img.src = `./assets/starships/${encodeURIComponent(starship.name)}.png`;
+    img.src = `./js/assets/starships/${encodeURIComponent(starship.name)}.png`;
     img.alt = `${starship.name} Starship`;
 
     nestedUl = document.createElement("ul");
@@ -353,3 +402,5 @@ function clearFilters() {
   }
 
 });
+
+}
