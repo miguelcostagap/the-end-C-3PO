@@ -10,3 +10,4 @@ function showSpinner() {
 function hideSpinner() {
     spinner.style.display = 'none';
 }
+

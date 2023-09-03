@@ -14,3 +14,4 @@ function showNotification(message, type) {
         }, 300);
     }, 3000); // time shown (measured in ms)
 }
+

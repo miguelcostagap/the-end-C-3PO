@@ -18,3 +18,4 @@ window.onclick = function(event) {
 function showModal() {
     modal.style.display = 'block';
 }
+
