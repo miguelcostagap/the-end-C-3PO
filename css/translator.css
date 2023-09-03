@@ -26,7 +26,7 @@ textarea {
     min-height: 100px;
 }
 
-select, input {
+select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -39,8 +39,16 @@ select, input {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-
 }
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--decorative-gray);
+    border-radius: 4px;
+}
+
 
 select:hover {
     border: 1px solid var(--accent-yellow);
