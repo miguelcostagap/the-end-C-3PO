@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars C-3PO Travel Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/feature-cards.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/notification.css">
+    <link rel="stylesheet" href="css/translator.css">
+    <link rel="stylesheet" href="css/characters.css">
+</head>
+
+<body>
+    <header>
+        <svg viewBox="0 0 2353 1050" xmlns="http://www.w3.org/2000/svg" id="swLogo" class="logo-svg">
+            <g clip-path="url(#a)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 328.044v164.068h479.92c55.783 0 127.052-51.581 127.052-136.909 0-34.318 13.125-56.704-27.211-102.098l-61.385-72.734c-35.174-32.814 4.202-32.814 33.747-32.814H754.75v344.555h160.695V147.557h216.585V0H430.7c-85.328 0-127.052 81.93-124.704 124.588 2.36 42.657 10.207 96.326 81.113 160.799 64.68 58.792-32.023 42.657-41.737 42.657H0ZM1487.36 0h-259.24l-145.33 492.125h161.74l26.23-68.909h170.63l25.33 68.909h158.43L1487.36 0Zm-180.49 305.075 55.79-180.487 52.51 180.487h-108.3Zm830.21 22.969c-62.35 0-62.35-22.969-62.35-22.969 53.43 0 100.79-77.832 100.79-157.518S2097.7 0 2035.33 0h-348.77v492.125h177.22V328.057s75.46 88.597 114.84 124.692c39.38 36.094 42.65 39.376 96.1 39.376h278.19V328.057c.03-.013-153.48-.013-215.83-.013Zm-160.8-114.847h-112.47v-88.609h112.47c51.57 0 60.49 88.609 0 88.609ZM0 554.457h181.304l45.939 164.094 42.658-164.094h190.331l49.22 164.094 49.234-164.094H716.19L571.798 1046.7H427.419l-63.267-233.003L292.87 1046.7H145.209L0 554.457Zm1088.28 2.841H829.04L683.727 1049.41h161.72l26.251-68.896h170.642l25.33 68.896h158.44l-137.83-492.112ZM907.806 862.36l55.783-180.488 52.501 180.488H907.806ZM2140.35 702.144c-29.51 0-61.69 3.45-26.5 36.251l61.4 72.747c40.32 45.394 39.67 64.317 39.67 98.661 0 85.315-84.4 136.897-140.19 136.897l-387.74 2.61c-53.42 0-56.69-3.27-96.08-39.37-39.36-36.092-114.85-124.702-114.85-124.702v164.072h-177.19V557.194h348.77c62.35 0 140.19 67.884 140.19 147.557 0 79.699-47.37 157.518-100.81 157.518 0 0 23.5 23.631 62.87 23.631 39.39 0 191.01.155 191.01.155 9.7 0 106.39 16.135 41.72-42.657-70.9-64.473-78.75-118.116-81.11-160.773-2.36-42.658 34.53-128.155 119.81-128.155h331.64v147.687l-212.61-.013Zm-551.8 68.234h-112.5v-88.609h112.5c51.58 0 60.49 88.609 0 88.609Z"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_1_7">
+                    <rect width="2353" height="1050" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg> 
+        <h1>C-3PO Travel console</h1>
+    </header>
+    
+
+    <main class="container">
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="icon icon-map">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="icon-path" d="M17.545 5l-5.545-4-5.545 4-6.455-4v18l6.455 4 5.545-4 5.545 4 6.455-4v-18l-6.455 4zm-10.545 2.073l4-2.886v13.068l-4 2.885v-13.067zm15 10.814l-4 2.479v-13.295l4-2.479v13.295z"/>
+                    </svg>
+                </div>
+                <h2>Map</h2>
+            </div>
+            <div class="feature-card" id="translatorCard">
+                <div class="icon icon-language-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 23h-2.784l-1.07-3h-4.875l-1.077 3h-2.697l4.941-13h2.604l4.958 13zm-4.573-5.069l-1.705-4.903-1.712 4.903h3.417zm-9.252-10.804c.126-.486.201-.852.271-1.212l-2.199-.428c-.036.185-.102.533-.22 1-.742-.109-1.532-.122-2.332-.041.019-.537.052-1.063.098-1.569h2.456v-2.083h-2.161c.106-.531.198-.849.288-1.149l-2.147-.645c-.158.526-.29 1.042-.422 1.794h-2.451v2.083h2.184c-.058.673-.093 1.371-.103 2.077-2.413.886-3.437 2.575-3.437 4.107 0 1.809 1.427 3.399 3.684 3.194 2.802-.255 4.673-2.371 5.77-4.974 1.134.654 1.608 1.753 1.181 2.771-.396.941-1.561 1.838-3.785 1.792v2.242c2.469.038 4.898-.899 5.85-3.166.93-2.214-.132-4.635-2.525-5.793zm-2.892 1.531c-.349.774-.809 1.543-1.395 2.149-.09-.645-.151-1.352-.184-2.107.533-.07 1.072-.083 1.579-.042zm-3.788.724c.062.947.169 1.818.317 2.596-1.996.365-2.076-1.603-.317-2.596z"/></svg>
+                </div>
+                <h2>Translator</h2>
+            </div>
+            <div class="feature-card" id="chatCard">
+                <div class="icon icon-language-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.722 5.843l.125-.562-1.02-.199-.101.464c-.345-.05-.712-.057-1.083-.019.009-.249.023-.494.045-.728h1.141v-.966h-1.004c.049-.246.092-.394.134-.533l-.997-.3c-.072.245-.134.484-.195.833h-1.138v.966h1.014c-.027.312-.043.637-.048.964-1.119.411-1.595 1.195-1.595 1.905 0 .84.663 1.578 1.709 1.482 1.301-.118 2.169-1.1 2.679-2.308.525.303.746.814.548 1.286-.185.436-.725.852-1.757.831v1.041c1.146.018 2.272-.417 2.715-1.469.431-1.028-.062-2.151-1.172-2.688zm-1.342.71c-.162.36-.375.717-.648.998-.041-.3-.07-.628-.086-.978.249-.032.499-.038.734-.02zm-1.758.336c.028.44.078.844.148 1.205-.927.169-.963-.744-.148-1.205zm2.378 6.111c0-.342.035-.677.102-1h-5.102c-.552 0-1-.449-1-1v-8c0-.551.448-1 1-1h8c.552 0 1 .449 1 1v5.101c.323-.066.657-.101 1-.101h1v-5c0-1.657-1.343-3-3-3h-8c-1.656 0-3 1.343-3 3v8c0 1.657 1.344 3 3 3h5v-1zm13-3h-8c-1.657 0-3 1.343-3 3v8c0 1.657 1.343 3 3 3h8c1.657 0 3-1.343 3-3v-8c0-1.657-1.343-3-3-3zm-1.865 11l-.66-1.846h-3l-.663 1.846h-1.66l3.041-8h1.602l3.053 8h-1.713zm-2.153-6.137l1.051 3.018h-2.103l1.052-3.018z"/></svg>
+                </div>
+                <h2>Chat</h2>
+            </div>
+        </section>
+
+        <section class="dynamic-content">
+            <div class="content-container">
+                <h2>Welcome to Star Wars C-3PO Travel Console</h2>
+                <p>Select a feature from above to explore the galaxy far, far away!</p>
+                <div class="spinner" id="loadingSpinner"></div>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <footer class="">
+        <p>&copy; 2023 Star Wars C-3PO Travel Console</p>
+    </footer>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Modal Title</h2>
+            <p>This is the content of the modal. You can place any information here, including forms, messages, etc.</p>
+        </div>
+    </div>
+
+    <!-- Notification Placeholder (for demonstration) -->
+    <div class="notification success">
+        This is a success notification!
+    </div>
+
+
+
+    <!-- JS scripts -->
+
+    <script src="js/spinner.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/notification.js" defer></script>
+    <script src="js/translator.js" defer></script>
+    <script src="js/characters.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
