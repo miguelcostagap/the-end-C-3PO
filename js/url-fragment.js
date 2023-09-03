@@ -39,6 +39,9 @@ function urlFragment() {
             case 'chat':
                 fetchCharacters();
                 break;
+            case 'starship-rentals':
+                loadSpaceshipFeature();
+                break;
             default:
                 dynamicContent.innerHTML = `
                     <h2>Welcome to Star Wars C-3PO Travel Console</h2>

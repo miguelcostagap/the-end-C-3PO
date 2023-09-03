@@ -1,0 +1,111 @@
+.filter-group select, .filter-group input {
+  width: min-content;
+  text-align: LEF;
+}
+
+.filter-actions button {
+  height: 50px;
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.selection-container {
+  margin-top: 2rem;
+}
+
+.results {
+  margin-top: 16px;
+}
+
+.results img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.star-rating {
+  display: flex;
+  align-items: center;
+}
+
+.star-button {
+  background: none;
+  border: none;
+  font-size: 24px; /* Adjust the size as needed */
+  margin: 0 4px; /* Adjust the spacing between stars as needed */
+  cursor: pointer;
+  color: var(--accent-yellow); /* Star color (yellow in this example) */
+  background: var(--primary-gray);
+  border: 1px solid var(--decorative-gray);
+}
+
+
+.white-star {
+  color: var(--primary-white);
+
+}
+
+.starship-item {
+  background: var(--primary-gray);
+  border: 1px solid var(--decorative-gray);
+  padding: 1rem;
+  margin-bottom: 6rem;
+  border-radius: 5px;
+}
+
+.starship-content {
+  margin-top: 32px;
+  display: flex;
+  align-items: start; /* Align items to the top */
+  gap: 1rem;
+  margin-bottom: 6rem;
+  
+}
+
+.starship-content img {
+  max-width: 500px; /* Ensure the image doesn't exceed this width */
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.starship-details {
+  flex: 1; /* This allows the details to take up the remaining space */
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Ensure there's no default margin */
+  text-align: left; /* Align the text to the left */
+}
+
+.starship-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comment-box {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  resize: vertical;
+}
+
