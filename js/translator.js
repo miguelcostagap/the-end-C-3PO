@@ -27,7 +27,7 @@ const Translator = (() => {
 
             </div>
 
-            <button id="translateButton">Translate</button>
+            <button id="translateButton" class="cta">Translate</button>
 
         </div>
     `;
