@@ -178,7 +178,7 @@ polygon.hoverable:hover {
 
 
 .grid-background {
-    background-image: url('../Assets/testing_temporary/02map.jpg');
+    background-image: url('../assets/img/02map.jpg');
     background-size: cover; 
     position: absolute;
     top: 0;

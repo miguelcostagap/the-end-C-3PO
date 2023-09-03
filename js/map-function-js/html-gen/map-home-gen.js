@@ -26,7 +26,7 @@ export function mapHomeGen(){
 
 <div id="galaxy-map">
     <div class="map-container">
-        <img src="Assets/testing_temporary/01map.jpg" id="map">
+        <img src="assets/img/01map.jpg" id="map">
     </div>
     <div id="exploreButton">explore destinations</div>
 </div>
