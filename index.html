@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/notification.css">
     <link rel="stylesheet" href="css/translator.css">
+    <link rel="stylesheet" href="css/map-function.css">
     <link rel="stylesheet" href="css/characters.css">
     <link rel="stylesheet" href="css/spacecraft.css">
 </head>
@@ -38,7 +39,7 @@
     <main class="container">
 
         <section class="features">
-            <div class="feature-card">
+            <div class="feature-card" id="mapCard">
                 <div class="icon icon-map">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path class="icon-path" d="M17.545 5l-5.545-4-5.545 4-6.455-4v18l6.455 4 5.545-4 5.545 4 6.455-4v-18l-6.455 4zm-10.545 2.073l4-2.886v13.068l-4 2.885v-13.067zm15 10.814l-4 2.479v-13.295l4-2.479v13.295z"/>
@@ -98,14 +99,16 @@
 
     <!-- JS scripts -->
 
-    <script src="js/url-fragment.js" defer></script>
+    <script type="module" src="js/url-fragment.js" defer></script>
     <script src="js/spinner.js" defer></script>
     <script src="js/modal.js" defer></script>
     <script src="js/notification.js" defer></script>
     <script src="js/translator.js" defer></script>
     <script src="js/characters.js" defer></script>
     <script src="js/spacecraft.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <script type="module" src="/js/map-function-js/map-function.js"></script>
+    <script type="module" src="/js/map-function-js/api-fetch/planet-list-fetch.js"></script>
+    <script type="module" src="js/main.js" defer></script>
 
 </body>
 

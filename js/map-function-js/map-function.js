@@ -1,88 +1,72 @@
 import { genPlanetList } from './api-fetch/planet-list-fetch.js';
 import { mapHomeGen } from './html-gen/map-home-gen.js';
-import { mapExplorerGen } from './html-gen/map-explorer-gen.js'
+import { mapExplorerGen } from './html-gen/map-explorer-gen.js';
 
 /*
 ** Variables
 */
 
-// genereal
-const mapContentToDisplay = document.getElementById("map-function-content");
+// general
 
-// variables in/for map-home html
-const toMapExplorer = document.getElementById("galaxy-map");
-const mapHomeGalaxyImg = document.querySelector("#galaxy-map img");
-let mapHomeHtml;
+export function loadMapHomeContent() {
+    const dynamicContent = document.querySelector('.dynamic-content .content-container');
+    dynamicContent.innerHTML = mapHomeGen();
+    initializeMapHomeListeners();
+}
 
-// variables in/for map-explorer html
-const toHome = document.getElementById("home");
-let planetGalaxyMapHtml;
-
-// variables in/for planet-list html
-let toPlanetList = document.getElementById("region1");
-
-/*
-** Event Listeners
-*/
+function initializeMapHomeListeners() {
+    const toMapExplorer = document.getElementById("galaxy-map");
+    const mapHomeGalaxyImg = document.querySelector("#galaxy-map img");
+    const mapContentToDisplay = document.getElementById("map-function-content");
 
 
-// event listeners for map-home
+    toMapExplorer.addEventListener('click', () => {
+        mapHomeGalaxyImg.classList.add("transition-effect");
+        setTimeout(() => {
+            const planetGalaxyMapHtml = mapExplorerGen();
+            mapContentToDisplay.innerHTML = planetGalaxyMapHtml;
+            mapHomeGalaxyImg.classList.remove("transition-effect");
+        }, 600);
+    });
 
-toMapExplorer.addEventListener('click', () => {
+    // Since "toHome" is part of the explorer, this should be initialized when explorer is loaded
+    const toHome = document.getElementById("home");
+    if (toHome) {
+        toHome.addEventListener('click', () => {
+            const mapHomeHtml = mapHomeGen();
+            mapContentToDisplay.innerHTML = mapHomeHtml;
+        });
+    }
 
-    mapHomeGalaxyImg.classList.add("transition-effect");
+    // This can be initialized here if "region1" is part of the home map
+    const toPlanetList = document.getElementById("region1");
+    if (toPlanetList) {
+        toPlanetList.addEventListener('click', displayPlanetList);
+    }
 
-    mapHomeHtml = mapHomeGen();
-    planetGalaxyMapHtml = mapExplorerGen();
-
-    setTimeout(async () => {
-        mapContentToDisplay.innerHTML = planetGalaxyMapHtml;
-        mapHomeGalaxyImg.classList.remove("transition-effect");
-    }, 600);
-
-});
-
-
-// event listeners for map-explorer
-
-toHome.addEventListener('click', () => {
-
-    mapHomeHtml = mapHomeGen();
-    planetGalaxyMapHtml = mapExplorerGen();
-    mapContentToDisplay.innerHTML = mapHomeHtml;
-});
-
-// event listeners for map-explorer
+    mapContentToDisplay.addEventListener("click", async function(event) {
+        // Check if the clicked element has the class "hoverable"
+        if (event.target.classList.contains("hoverable")) {
+            try {
+                const mapHomeHtml = await genPlanetList(1);
+                mapContentToDisplay.innerHTML = mapHomeHtml;
+                console.log("hereFUUUUUUK " + mapHomeHtml);
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        }
+    });
+    
+}
 
 function displayPlanetList() {
     console.log("nice");
-    mapHomeHtml = genPlanetList(1);
+    const mapHomeHtml = genPlanetList(1);
     mapContentToDisplay.innerHTML = mapHomeHtml;
 }
 
-/*
-toPlanetList.addEventListener('click', () => {
-    console.log("asfukkkk")
-    mapHomeHtml = genPlanetList(1);
-    mapContentToDisplay.innerHTML = mapHomeHtml;
-    displayPlanetList;
-});
-
-*/
 document.body.addEventListener('click', (event) => {
     if (event.target.matches('.div1')) {
-console.log("fuck yeah");    }
-});
-
-document.getElementById("map-function-content").addEventListener("click", async function(event) {
-    // Check if the clicked element has the class "hoverable"
-    if (event.target.classList.contains("hoverable")) {
-        try {
-            const mapHomeHtml = await genPlanetList(1);
-            mapContentToDisplay.innerHTML = mapHomeHtml;
-            console.log("hereFUUUUUUK " + mapHomeHtml);
-        } catch (error) {
-            console.error("Error:", error);
-        }
+        console.log("fuck yeah");
     }
 });

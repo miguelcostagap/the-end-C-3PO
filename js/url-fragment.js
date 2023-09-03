@@ -1,7 +1,9 @@
+import { loadMapHomeContent } from './map-function-js/map-function.js';
+
 window.addEventListener('hashchange', urlFragment);
 
 
-function urlFragment() {
+export function urlFragment() {
     const featureCards = document.querySelectorAll('.feature-card');
 
     featureCards.forEach(card => {
@@ -28,10 +30,7 @@ function urlFragment() {
         const dynamicContent = document.querySelector('.dynamic-content .content-container');
         switch (hash) {
             case 'map':
-                dynamicContent.innerHTML = `
-                    <h2>Galactic Map</h2>
-                    <p>Explore the vastness of the galaxy with this interactive map.</p>
-                `;
+                loadMapHomeContent();
                 break;
             case 'translator':
                 Translator.init();

@@ -1,7 +1,7 @@
 export function mapExplorerGen() {
     let mapExplorerGenHtml = `
     <div class="mapExplorerCoords">
-    <div class="grid-background"> <img src="./Assets/testing_temporary/zone-all.png" alt="" class="overlay-image">
+    <div class="grid-background"> <img src="./assets/img/zone-all.png" alt="" class="overlay-image">
 
     </div>
 

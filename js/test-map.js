@@ -5,10 +5,10 @@ const initialImg = document.querySelector(".galaxy-map img");
 const contentToDisplay = [
     `
     <div class="map02">
-        <img src="Assets/testing_temporary/02map.jpg" id="map">
-        <img src="Assets/testing_temporary/zone1.png" class="overlay" id="zone1">
-        <img src="Assets/testing_temporary/zone2.png" class="overlay" id="zone2">
-        <img src="Assets/testing_temporary/zone-all.png" class="overlay" id="zone-all">
+        <img src="assets/img/02map.jpg" id="map">
+        <img src="assets/img/zone1.png" class="overlay" id="zone1">
+        <img src="assets/img/zone2.png" class="overlay" id="zone2">
+        <img src="assets/img/zone-all.png" class="overlay" id="zone-all">
     </div>
     `, `
     <div class="quick-planner">
@@ -37,7 +37,7 @@ const contentToDisplay = [
 
         <div class="galaxy-map">
         <div class="map-container">
-        <img src="Assets/testing_temporary/01map.jpg" id="map">
+        <img src="assets/img/01map.jpg" id="map">
     </div>
     <div id="exploreButton">explore destinations</div>
         </div>
