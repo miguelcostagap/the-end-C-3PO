@@ -219,6 +219,8 @@ function renderResult(results) {
       let selectButton = document.createElement("button");
       selectButton.textContent = "Select Starship";
       selectButton.classList.add("select-button");
+      selectButton.setAttribute("data-index", index);  // Add this line
+
       actionsDiv.appendChild(selectButton);
 
       let spacingDiv = document.createElement("div");
@@ -272,11 +274,8 @@ function renderResult(results) {
   // Add event listener for the "Select" buttons
   resultsContainer.addEventListener("click", (event) => {
     if (event.target.classList.contains("select-button")) {
-      const selectedButton = event.target;
-      const selectedLi = selectedButton.parentElement;
-      const selectedIndex = Array.from(ul.children).indexOf(selectedLi);
-
-      handleSelect(selectedIndex);
+        const selectedIndex = parseInt(event.target.getAttribute("data-index"), 10);
+        handleSelect(selectedIndex);
     }
 
   // Create star rating buttons

@@ -52,19 +52,22 @@
   font-size: 24px; /* Adjust the size as needed */
   margin: 0 4px; /* Adjust the spacing between stars as needed */
   cursor: pointer;
-  color: var(--primary-yellow); /* Star color (yellow in this example) */
+  color: var(--accent-yellow); /* Star color (yellow in this example) */
+  background: var(--primary-gray);
+  border: 1px solid var(--decorative-gray);
 }
 
 
 .white-star {
-  color: white; /* Set the color to white */
+  color: var(--primary-white);
+
 }
 
 .starship-item {
   background: var(--primary-gray);
   border: 1px solid var(--decorative-gray);
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 6rem;
   border-radius: 5px;
 }
 
