@@ -7,5 +7,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         fetchCharacters();
     });
 
+    document.getElementById("starshipCard").addEventListener("click", () => {
+        loadSpaceshipFeature();
+    });
+
     urlFragment();
 });
