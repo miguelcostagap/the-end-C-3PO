@@ -248,14 +248,23 @@ polygon.hoverable:hover {
     align-items: center;
 }
 
+
 .planet-image {
-    max-width: 100px;
-    /* Adjust max width as needed */
-    max-height: 100px;
-    /* Adjust max height as needed */
-    margin-right: 10px;
-    /* Add space between image and table */
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 2rem;
 }
+
+.planet-image img {
+    border-radius: 50%;
+}
+
+.planetInfo .planet-content .planet-image {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+}
+
 
 table {
     width: 100%;
@@ -291,3 +300,11 @@ th {
   }
   
   
+  .planet-general {
+    display: flex;
+    margin: 2rem 0;
+  }
+
+  .planet-details {
+    text-align: left;
+  }

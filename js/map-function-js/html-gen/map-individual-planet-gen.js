@@ -36,7 +36,7 @@ export function mapIndividualPlanetGen(planet) {
                     <label for="return-date">Return Date:</label>
                     <input type="date" id="return-date" name="return-date">
                 </div>
-                <input type="submit" value="Search Warp">
+                <input type="submit" class="cta" value="Search Warp">
             </form>
         </div>
     </div>
