@@ -9,12 +9,14 @@ export function mapPlanetListGen(planet, index, planetImg) {
             <table>
                 <tr>
                     <td>Planet Name</td>
-                    <td>Distance</td>
+                    <td>Terrain</td>
+                    <td>Dimension</td>
                     <td>Population</td>
                 </tr>
                 <tr>
                     <td>${planet.name}</td>
                     <td>${planet.terrain}</td>
+                    <td>${planet.dimension}</td>
                     <td>${planet.population}<</td>
                 </tr>
             </table>
