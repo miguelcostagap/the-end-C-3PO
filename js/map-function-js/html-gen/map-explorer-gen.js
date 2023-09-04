@@ -1,31 +1,22 @@
 export function mapExplorerGen() {
     let mapExplorerGenHtml = `
     <div class="mapExplorerCoords">
-    <div class="grid-background"> <img src="./assets/img/zone-all.png" alt="" class="overlay-image">
-
+    <div class="grid-container">
+        <div class="grid-background"></div>
+        <div class="overlay-image" id="overlay-image">
+            <img src="./assets/img/zone-all.png" alt="">
+        </div>
+        <div class="div1" id="region1">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <polygon class="hoverable" points="35,15 46,9 55,12 51,17 56,19 48,23 49,25 40,25 54,30 37,28 32,30 26,27 37,23 " data-region-id="1"/>
+            </svg>
+        </div>
+        <div class="div2" id="region2"> <!-- Updated id to "region2" -->
+            <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <polygon class="hoverable" points="35,35 46,39 55,42 51,47" data-region-id="2"/>
+            </svg>
+        </div>
     </div>
-
-    <div class="div1">
-        <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <polygon class="hoverable" points="0,0 50,35 30,45 8,18 20,5"
-             />
-        </svg>
-    </div>
-
-    <div class="div2" id="region1">
-        <svg width="100%" height="auto" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <polygon class="hoverable" points="1,0.75 2,1.05 1.2,1.35 0.32,0.54 0.8,0.15"
-            onclick="alert('I am click functionality!');"  />
-        </svg>
-    </div>
-
-    <div class="div3"> </div>
-    <div class="div4"> </div>
-    <div class="div5"> </div>
-    <div class="div6"> </div>
-    <div class="div7"> </div>
-    <div class="div8"> </div>
-    <div class="div9"> </div>
 </div>
     `;
     return mapExplorerGenHtml
