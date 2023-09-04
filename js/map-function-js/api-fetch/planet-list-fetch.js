@@ -1,13 +1,10 @@
-import { getArrayById } from '../local-data-fetch/regions-planets-id.js'; 
-import { mapPlanetListGen } from '../html-gen/map-planet-list-gen.js'; 
+import { getArrayById } from '../local-data-fetch/regions-planets-id.js';
+import { getPlanetImg } from '../local-data-fetch/image-link-fetch.js';
 
-let htmlPlanetInfo = "";
+import { mapPlanetListGen } from '../html-gen/map-planet-list-gen.js';
+import { mapIndividualPlanetGen } from '../html-gen/map-individual-planet-gen.js';
 
-function mergeHtml(html){
-htmlPlanetInfo+=html;
-}
-
-function fetchPlanetsData(planetsArray) {
+function fetchPlanetsData(planetsArray, isItIndividual) {
     let htmlPlanetInfo = '';
     const fetchPromises = planetsArray.map(element => {
         let planetIndex = element;
@@ -20,8 +17,22 @@ function fetchPlanetsData(planetsArray) {
                 return response.json();
             })
             .then(data => {
-                let htmlPremise = mapPlanetListGen(data);
-                htmlPlanetInfo += htmlPremise;
+
+                let planetImg = getPlanetImg(planetIndex);
+
+                console.log("img link " + planetImg);
+
+                if (isItIndividual) {
+                    let htmlPremise = mapIndividualPlanetGen(data);
+                    htmlPlanetInfo += htmlPremise;
+                    console.log(htmlPlanetInfo);
+                } else {
+                    let htmlPremise = mapPlanetListGen(data,planetIndex, planetImg);
+                    htmlPlanetInfo += htmlPremise;
+                    console.log(htmlPlanetInfo);
+
+                }
+
             })
             .catch(error => {
                 console.error('Fetch error:', error);
@@ -38,7 +49,16 @@ function fetchPlanetsData(planetsArray) {
 export function genPlanetList(region) {
     let planetArray = getArrayById(region);
 
-    return fetchPlanetsData(planetArray).then(htmlPlanetInfo => {
+    return fetchPlanetsData(planetArray, false).then(htmlPlanetInfo => {
+        return htmlPlanetInfo;
+    });
+}
+
+export function genPlanetPageIndividual(id) {
+
+    let planetId = [id];
+
+    return fetchPlanetsData(planetId, true).then(htmlPlanetInfo => {
         console.log("what is being passed = " + htmlPlanetInfo);
         return htmlPlanetInfo;
     });

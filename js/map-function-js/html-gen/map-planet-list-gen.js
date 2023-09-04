@@ -1,10 +1,11 @@
-export function mapPlanetListGen(planet) {
+export function mapPlanetListGen(planet, index, planetImg) {
    let mapPlanetListHtml = `
-<div class="planet-list-container">
+<div class="planet-list-container" id=${index}>
 <div class="planet-list">
-    <div class="planetInfo">
+    <div class="planetInfo" data-planet-id="1">
+
         <div class="planet-content">
-            <img class="planet-image" src="https://thumbs2.imgbox.com/89/4b/XjgG7xmp_t.png" alt="Planet 1" />
+            <img class="planet-image" src="${planetImg}" alt="Planet 1" >
             <table>
                 <tr>
                     <td>Planet Name</td>
@@ -18,6 +19,9 @@ export function mapPlanetListGen(planet) {
                 </tr>
             </table>
         </div>
+        
+        <button id="invisible-button" class="planet-button" data-planet-id=${index}>Click Me</button>
+
     </div>
 </div>
 </div>
