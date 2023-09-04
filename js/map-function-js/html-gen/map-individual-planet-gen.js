@@ -1,9 +1,9 @@
-export function mapIndividualPlanetGen(planet) {
+export function mapIndividualPlanetGen(planet, planetImg) {
     let mapPlanetPageHtml = `
     <div class="planet-container">
         <div class="planet-general">
             <div class="planet-image">
-                <img src="https://thumbs2.imgbox.com/89/4b/XjgG7xmp_t.png" alt="Planet Image">
+                <img src="${planetImg}" alt="Planet Image">
             </div>
             <div class="planet-details">
                 <h2>${planet.name}</h2>
