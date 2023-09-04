@@ -23,7 +23,7 @@ function fetchPlanetsData(planetsArray, isItIndividual) {
                 console.log("img link " + planetImg);
 
                 if (isItIndividual) {
-                    let htmlPremise = mapIndividualPlanetGen(data);
+                    let htmlPremise = mapIndividualPlanetGen(data, planetImg);
                     htmlPlanetInfo += htmlPremise;
                     console.log(htmlPlanetInfo);
                 } else {

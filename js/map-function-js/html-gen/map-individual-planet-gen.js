@@ -1,18 +1,23 @@
-export function mapIndividualPlanetGen(planet) {
+export function mapIndividualPlanetGen(planet, planetImg) {
     let mapPlanetPageHtml = `
     <div class="planet-container">
         <div class="planet-general">
             <div class="planet-image">
-                <img src="https://thumbs2.imgbox.com/89/4b/XjgG7xmp_t.png" alt="Planet Image">
+                <img src="${planetImg}" alt="Planet Image">
             </div>
             <div class="planet-details">
                 <h2>${planet.name}</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna non elit fringilla aliquam.
+                <p>   
                 </p>
                 <div class="planet-statistics">
-                    <p>Population: ${planet.population}</p>
-                    <p>Surface Area: 510.1 million square kilometers</p>
-                    <p>Distance from Sun: 149.6 million kilometers</p>
+                    <p>---> Rotation Period: ${planet.rotation_period}</p>
+                    <p>---> Orbital Period: ${planet.orbital_period}</p>
+                    <p>---> Diameter: ${planet.diameter}</p>
+                    <p>---> Climate: ${planet.climate}</p>
+                    <p>---> Gravity: ${planet.gravity}</p>
+                    <p>---> Terrain: ${planet.terrain}</p>
+                    <p>---> Surface Water: ${planet.surface_water}</p>
+                    <p>---> Population: ${planet.population}</p>
                 </div>
             </div>
            
