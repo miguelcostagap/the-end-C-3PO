@@ -1,4 +1,4 @@
-# ![C-3PO Droid](https://github.com/miguelcostagap/the-end-C-3PO/blob/main/C3PO.png) C-3PO Droid_*The Star Wars Travel*
+# ![C-3PO Droid](https://github.com/miguelcostagap/the-end-C-3PO/blob/main/C3PO.png) C-3PO Droid_*The Star Wars Travel Console*
 
 [![js-standard-style][js-standard-style_img]][js-standard-style_url]
 ![Status: In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow)
@@ -6,7 +6,7 @@
 [js-standard-style_img]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [js-standard-style_url]: https://standardjs.com/
 
-Get inspired by the famous Star Wars droid... the C-3PO Droid!!!
+Get inspired by the famous Star Wars droid... C-3PO!!!
 
 We have created and implemented a themed single page application (SPA)
 
